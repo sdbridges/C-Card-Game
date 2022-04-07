@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/stuartbridges/Desktop/untitled2/card.cpp
+iostream
+-
+string
+-
+card.h
+/Users/stuartbridges/Desktop/untitled2/card.h
+
+/Users/stuartbridges/Desktop/untitled2/card.h
+
+/Users/stuartbridges/Desktop/untitled2/deck.cpp
+iostream
+-
+algorithm
+-
+random
+-
+deck.h
+/Users/stuartbridges/Desktop/untitled2/deck.h
+
+/Users/stuartbridges/Desktop/untitled2/deck.h
+vector
+-
+stack
+-
+card.h
+/Users/stuartbridges/Desktop/untitled2/card.h
+
+/Users/stuartbridges/Desktop/untitled2/main.cpp
+iostream
+-
+deck.h
+/Users/stuartbridges/Desktop/untitled2/deck.h
+
