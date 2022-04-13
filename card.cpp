@@ -1,91 +1,97 @@
-#include <iostream>
 #include <string>
 
 #include "card.h"
 
-Card::Card(Suit suit, Value value) {
-    this ->suit = suit; //dereference pointer to current instance
-    this ->value = value;
+Card::Card(Suit suit, Value value)
+{
+    this->suit = suit;
+    this->value = value;
 }
 
-Card::~Card() {
+Card::~Card()
+{
 
 }
 
-void Card::printCard() {
+std::string Card::print()
+{
     std::string output;
 
     switch (this->value) {
-        case Value::two:
+        case Value::TWO:
             output += "Two of ";
             break;
-        case Value::three:
+        case Value::THREE:
             output += "Three of ";
             break;
-        case Value::four:
+        case Value::FOUR:
             output += "Four of ";
             break;
-        case Value::five:
+        case Value::FIVE:
             output += "Five of ";
             break;
-        case Value::six:
+        case Value::SIX:
             output += "Six of ";
             break;
-        case Value::seven:
+        case Value::SEVEN:
             output += "Seven of ";
             break;
-        case Value::eight:
+        case Value::EIGHT:
             output += "Eight of ";
             break;
-        case Value::nine:
+        case Value::NINE:
             output += "Nine of ";
             break;
-        case Value::ten:
+        case Value::TEN:
             output += "Ten of ";
             break;
-        case Value::jack:
+        case Value::JACK:
             output += "Jack of ";
             break;
-        case Value::queen:
+        case Value::QUEEN:
             output += "Queen of ";
             break;
-        case Value::king:
+        case Value::KING:
             output += "King of ";
             break;
-        case Value::ace:
+        case Value::ACE:
             output += "Ace of ";
             break;
     }
 
     switch (this->suit) {
-        case Suit::club:
+        case Suit::CLUB:
             output += "Clubs";
             break;
-        case Suit::diamond:
+        case Suit::DIAMOND:
             output += "Diamonds";
             break;
-        case Suit::heart:
+        case Suit::HEART:
             output += "Hearts";
             break;
-        case Suit::spade:
+        case Suit::SPADE:
             output += "Spades";
             break;
     }
 
-    std::cout << output << std::endl;
+    return output;
 }
 
-bool Card::sameSuit(Card compare) {
-    if (this -> suit == compare.suit) {
+bool Card::sameSuit(Card compare)
+{
+    if (this->suit == compare.suit) {
         return true;
     }
+
     return false;
 }
 
-int Card::compareValue(Card compare) {
+int Card::compareValue(Card compare)
+{
     if (this->value < compare.value) {
         return -1;
     }
+
     if (this->value > compare.value) {
         return 1;
     }
@@ -93,10 +99,10 @@ int Card::compareValue(Card compare) {
     return 0;
 }
 
-int Card::getValue()  {
-    return value;
+int Card::getValue() {
+    return this->value;
 }
 
 int Card::getSuit() {
-    return suit;
+    return this->suit;
 }
