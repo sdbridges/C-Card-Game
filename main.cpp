@@ -1,29 +1,12 @@
 #include <iostream>
 
-#include "deck.h"
+#include "war.h"
 
 
 int main(int argc, char **argv) {
-    Deck deck; //create deck
+    War war;
 
-    deck.shuffle(); //shuffles the deck
-
-
-    //Draws 10 cards and prints each one
-    std::cout << "\n******Draw 10 cards:********* " << std::endl;
-    for (int i = 0; i < 10; i++) {
-        Card* oneCard = deck.draw();
-        oneCard->printCard();
-    }
-
-    deck.shuffle(); //reshuffles the deck
-
-    //Draws 10 cards and prints each one
-    std::cout << "\n*********Draw 10 cards:********** " << std::endl;
-    for (int i = 0; i < 10; i++) {
-        Card* oneCard = deck.draw();
-        oneCard->printCard();
-    }
+    war.play();
 
     return 0;
 }
